@@ -6,10 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const applyTheme = (theme) => {
         if (theme === 'light') {
             body.classList.add('light-mode');
-            themeToggle.textContent = '☀️';
+            themeToggle.classList.remove('fa-moon');
+            themeToggle.classList.add('fa-sun');
         } else {
             body.classList.remove('light-mode');
-            themeToggle.textContent = '🌙';
+            themeToggle.classList.remove('fa-sun');
+            themeToggle.classList.add('fa-moon');
         }
     };
 
